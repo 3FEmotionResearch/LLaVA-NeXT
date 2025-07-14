@@ -1,0 +1,33 @@
+# Step 1: Install PyTorch first (required for flash-attn compilation)
+torch==2.1.2
+torchvision==0.16.2
+numpy==1.26.4
+
+# Step 2: Basic dependencies
+transformers==4.40.0
+accelerate==0.29.3
+datasets==2.16.1
+tokenizers==0.19
+
+# Step 3: LLaVA-NeXT specific (requires torch)
+# flash-attn==2.5.7  # Install this separately after torch
+deepspeed==0.12.2
+gradio==3.35.2
+gradio_client==0.2.9
+einops==0.6.1
+einops-exts==0.0.4
+
+# Step 4: Image/Video processing
+opencv-python-headless==4.9.0.80
+decord==0.6.0
+pillow==10.3.0
+
+# Step 5: Other utilities
+wandb==0.16.5
+openai==1.23.6
+bitsandbytes==0.41.0
+peft==0.4.0
+pandas==2.2.2
+scipy==1.13.0
+scikit-learn==1.2.2
+matplotlib==3.8.4

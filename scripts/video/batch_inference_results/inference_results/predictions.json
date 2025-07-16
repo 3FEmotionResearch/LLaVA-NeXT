@@ -1,0 +1,402 @@
+{
+  "samplenew3_00000058": {
+    "video_name": "samplenew3_00000058",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000058.mp4",
+    "inference_time": 12.384405851364136
+  },
+  "samplenew3_00000084": {
+    "video_name": "samplenew3_00000084",
+    "raw_response": "Angry, concerned, tense",
+    "cleaned_emotion": "Angry, concerned, tense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000084.mp4",
+    "inference_time": 10.907731056213379
+  },
+  "samplenew3_00000139": {
+    "video_name": "samplenew3_00000139",
+    "raw_response": "Anxious, concerned, contemplative",
+    "cleaned_emotion": "Anxious, concerned, contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000139.mp4",
+    "inference_time": 10.666588544845581
+  },
+  "samplenew3_00000151": {
+    "video_name": "samplenew3_00000151",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000151.mp4",
+    "inference_time": 11.877651453018188
+  },
+  "samplenew3_00000195": {
+    "video_name": "samplenew3_00000195",
+    "raw_response": "Serious, contemplative, intense",
+    "cleaned_emotion": "Serious, contemplative, intense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000195.mp4",
+    "inference_time": 10.37441349029541
+  },
+  "samplenew3_00000220": {
+    "video_name": "samplenew3_00000220",
+    "raw_response": "Confused, curious, contemplative",
+    "cleaned_emotion": "Confused, curious, contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000220.mp4",
+    "inference_time": 11.367970705032349
+  },
+  "samplenew3_00000261": {
+    "video_name": "samplenew3_00000261",
+    "raw_response": "Serene, contemplative, thoughtful",
+    "cleaned_emotion": "Serene, contemplative, thoughtful",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000261.mp4",
+    "inference_time": 11.769050598144531
+  },
+  "samplenew3_00000294": {
+    "video_name": "samplenew3_00000294",
+    "raw_response": "Happy and content",
+    "cleaned_emotion": "Happy and content",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000294.mp4",
+    "inference_time": 11.256912469863892
+  },
+  "samplenew3_00000340": {
+    "video_name": "samplenew3_00000340",
+    "raw_response": "Serene, contemplative, composed",
+    "cleaned_emotion": "Serene, contemplative, composed",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000340.mp4",
+    "inference_time": 10.83953046798706
+  },
+  "samplenew3_00000347": {
+    "video_name": "samplenew3_00000347",
+    "raw_response": "Angry, confused, tense",
+    "cleaned_emotion": "Angry, confused, tense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000347.mp4",
+    "inference_time": 10.570760250091553
+  },
+  "samplenew3_00000360": {
+    "video_name": "samplenew3_00000360",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000360.mp4",
+    "inference_time": 10.711944341659546
+  },
+  "samplenew3_00000367": {
+    "video_name": "samplenew3_00000367",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000367.mp4",
+    "inference_time": 11.424756526947021
+  },
+  "samplenew3_00000378": {
+    "video_name": "samplenew3_00000378",
+    "raw_response": "Confused, tense, anxious",
+    "cleaned_emotion": "Confused, tense, anxious",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000378.mp4",
+    "inference_time": 11.381386280059814
+  },
+  "samplenew3_00000398": {
+    "video_name": "samplenew3_00000398",
+    "raw_response": "Serene, contemplative, introspective",
+    "cleaned_emotion": "Serene, contemplative, introspective",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000398.mp4",
+    "inference_time": 10.637738704681396
+  },
+  "samplenew3_00000425": {
+    "video_name": "samplenew3_00000425",
+    "raw_response": "Confused, curious, contemplative",
+    "cleaned_emotion": "Confused, curious, contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000425.mp4",
+    "inference_time": 11.066758394241333
+  },
+  "samplenew3_00000432": {
+    "video_name": "samplenew3_00000432",
+    "raw_response": "Angry, Confused, Tense",
+    "cleaned_emotion": "Angry, Confused, Tense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000432.mp4",
+    "inference_time": 10.627856731414795
+  },
+  "samplenew3_00000447": {
+    "video_name": "samplenew3_00000447",
+    "raw_response": "Happy and content",
+    "cleaned_emotion": "Happy and content",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000447.mp4",
+    "inference_time": 11.542197227478027
+  },
+  "samplenew3_00000454": {
+    "video_name": "samplenew3_00000454",
+    "raw_response": "Angry, frustrated, stern",
+    "cleaned_emotion": "Angry, frustrated, stern",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000454.mp4",
+    "inference_time": 11.543807744979858
+  },
+  "samplenew3_00000455": {
+    "video_name": "samplenew3_00000455",
+    "raw_response": "Angry, frustrated, concerned",
+    "cleaned_emotion": "Angry, frustrated, concerned",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000455.mp4",
+    "inference_time": 11.076576232910156
+  },
+  "samplenew3_00000467": {
+    "video_name": "samplenew3_00000467",
+    "raw_response": "Angry, tense, concerned",
+    "cleaned_emotion": "Angry, tense, concerned",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000467.mp4",
+    "inference_time": 11.29859471321106
+  },
+  "samplenew3_00000482": {
+    "video_name": "samplenew3_00000482",
+    "raw_response": "Serene and contemplative",
+    "cleaned_emotion": "Serene and contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000482.mp4",
+    "inference_time": 10.935416221618652
+  },
+  "samplenew3_00000493": {
+    "video_name": "samplenew3_00000493",
+    "raw_response": "Serene, contemplative, focused",
+    "cleaned_emotion": "Serene, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000493.mp4",
+    "inference_time": 11.41811490058899
+  },
+  "samplenew3_00000495": {
+    "video_name": "samplenew3_00000495",
+    "raw_response": "Calm and peaceful",
+    "cleaned_emotion": "Calm and peaceful",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000495.mp4",
+    "inference_time": 10.301950454711914
+  },
+  "samplenew3_00000496": {
+    "video_name": "samplenew3_00000496",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000496.mp4",
+    "inference_time": 11.580763101577759
+  },
+  "samplenew3_00000500": {
+    "video_name": "samplenew3_00000500",
+    "raw_response": "Happy, content, and engaged",
+    "cleaned_emotion": "Happy, content, and engaged",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000500.mp4",
+    "inference_time": 11.556710004806519
+  },
+  "samplenew3_00000501": {
+    "video_name": "samplenew3_00000501",
+    "raw_response": "Sad, contemplative, introspective",
+    "cleaned_emotion": "Sad, contemplative, introspective",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000501.mp4",
+    "inference_time": 12.249809741973877
+  },
+  "samplenew3_00000504": {
+    "video_name": "samplenew3_00000504",
+    "raw_response": "Calm and peaceful",
+    "cleaned_emotion": "Calm and peaceful",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000504.mp4",
+    "inference_time": 11.743780612945557
+  },
+  "samplenew3_00000511": {
+    "video_name": "samplenew3_00000511",
+    "raw_response": "Serious, focused, attentive",
+    "cleaned_emotion": "Serious, focused, attentive",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000511.mp4",
+    "inference_time": 11.114003896713257
+  },
+  "samplenew3_00000513": {
+    "video_name": "samplenew3_00000513",
+    "raw_response": "Sad, anxious, worried",
+    "cleaned_emotion": "Sad, anxious, worried",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000513.mp4",
+    "inference_time": 10.435196161270142
+  },
+  "samplenew3_00000535": {
+    "video_name": "samplenew3_00000535",
+    "raw_response": "Serious, contemplative, intense",
+    "cleaned_emotion": "Serious, contemplative, intense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000535.mp4",
+    "inference_time": 11.951404571533203
+  },
+  "samplenew3_00000548": {
+    "video_name": "samplenew3_00000548",
+    "raw_response": "Angry, concerned, focused",
+    "cleaned_emotion": "Angry, concerned, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000548.mp4",
+    "inference_time": 13.036492586135864
+  },
+  "samplenew3_00000579": {
+    "video_name": "samplenew3_00000579",
+    "raw_response": "Serene, contemplative, introspective",
+    "cleaned_emotion": "Serene, contemplative, introspective",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000579.mp4",
+    "inference_time": 12.815070867538452
+  },
+  "samplenew3_00000588": {
+    "video_name": "samplenew3_00000588",
+    "raw_response": "Serene, contemplative, focused",
+    "cleaned_emotion": "Serene, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000588.mp4",
+    "inference_time": 11.276898384094238
+  },
+  "samplenew3_00000593": {
+    "video_name": "samplenew3_00000593",
+    "raw_response": "Serious, contemplative, concerned",
+    "cleaned_emotion": "Serious, contemplative, concerned",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000593.mp4",
+    "inference_time": 11.46480393409729
+  },
+  "samplenew3_00000602": {
+    "video_name": "samplenew3_00000602",
+    "raw_response": "Confident, assertive, serious",
+    "cleaned_emotion": "Confident, assertive, serious",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000602.mp4",
+    "inference_time": 11.944591283798218
+  },
+  "samplenew3_00000605": {
+    "video_name": "samplenew3_00000605",
+    "raw_response": "Serene, contemplative, introspective",
+    "cleaned_emotion": "Serene, contemplative, introspective",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000605.mp4",
+    "inference_time": 11.530038595199585
+  },
+  "samplenew3_00000665": {
+    "video_name": "samplenew3_00000665",
+    "raw_response": "Happy and content",
+    "cleaned_emotion": "Happy and content",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000665.mp4",
+    "inference_time": 11.420028686523438
+  },
+  "samplenew3_00000668": {
+    "video_name": "samplenew3_00000668",
+    "raw_response": "Sad, contemplative",
+    "cleaned_emotion": "Sad, contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000668.mp4",
+    "inference_time": 11.322407722473145
+  },
+  "samplenew3_00000682": {
+    "video_name": "samplenew3_00000682",
+    "raw_response": "Calm and composed",
+    "cleaned_emotion": "Calm and composed",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000682.mp4",
+    "inference_time": 10.979082107543945
+  },
+  "samplenew3_00000723": {
+    "video_name": "samplenew3_00000723",
+    "raw_response": "Happy and content",
+    "cleaned_emotion": "Happy and content",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000723.mp4",
+    "inference_time": 10.612941265106201
+  },
+  "samplenew3_00000725": {
+    "video_name": "samplenew3_00000725",
+    "raw_response": "Serene, contemplative, content",
+    "cleaned_emotion": "Serene, contemplative, content",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000725.mp4",
+    "inference_time": 11.721949815750122
+  },
+  "samplenew3_00000744": {
+    "video_name": "samplenew3_00000744",
+    "raw_response": "Angry, Confused, Serious",
+    "cleaned_emotion": "Angry, Confused, Serious",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000744.mp4",
+    "inference_time": 11.325365543365479
+  },
+  "samplenew3_00000765": {
+    "video_name": "samplenew3_00000765",
+    "raw_response": "Surprised, concerned, curious",
+    "cleaned_emotion": "Surprised, concerned, curious",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000765.mp4",
+    "inference_time": 11.153031826019287
+  },
+  "samplenew3_00000803": {
+    "video_name": "samplenew3_00000803",
+    "raw_response": "Serious, contemplative, thoughtful",
+    "cleaned_emotion": "Serious, contemplative, thoughtful",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000803.mp4",
+    "inference_time": 11.27949833869934
+  },
+  "samplenew3_00000814": {
+    "video_name": "samplenew3_00000814",
+    "raw_response": "Calm and peaceful",
+    "cleaned_emotion": "Calm and peaceful",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000814.mp4",
+    "inference_time": 10.565895795822144
+  },
+  "samplenew3_00000821": {
+    "video_name": "samplenew3_00000821",
+    "raw_response": "Serene and contemplative",
+    "cleaned_emotion": "Serene and contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000821.mp4",
+    "inference_time": 11.240382194519043
+  },
+  "samplenew3_00000827": {
+    "video_name": "samplenew3_00000827",
+    "raw_response": "Serene, contemplative, introspective",
+    "cleaned_emotion": "Serene, contemplative, introspective",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000827.mp4",
+    "inference_time": 11.675581455230713
+  },
+  "samplenew3_00000829": {
+    "video_name": "samplenew3_00000829",
+    "raw_response": "Confused, curious, contemplative",
+    "cleaned_emotion": "Confused, curious, contemplative",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000829.mp4",
+    "inference_time": 11.454386711120605
+  },
+  "samplenew3_00000839": {
+    "video_name": "samplenew3_00000839",
+    "raw_response": "Serious, contemplative, intense",
+    "cleaned_emotion": "Serious, contemplative, intense",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000839.mp4",
+    "inference_time": 10.847633123397827
+  },
+  "samplenew3_00000891": {
+    "video_name": "samplenew3_00000891",
+    "raw_response": "Serious, contemplative, focused",
+    "cleaned_emotion": "Serious, contemplative, focused",
+    "question": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>",
+    "video_path": "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video/samplenew3_00000891.mp4",
+    "inference_time": 10.704011917114258
+  }
+}

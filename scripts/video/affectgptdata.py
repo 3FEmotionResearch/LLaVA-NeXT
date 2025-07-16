@@ -345,7 +345,8 @@ def batch_inference_videos(enhanced_merged_by_name, video_base_path, model_path,
                 "average",                    # pool_mode
                 "grid",                       # newline_position
                 "True",                       # overwrite
-                video_path                    # video_path
+                video_path,                    # video_path
+                "Please provide a detailed description of the video, focusing on the main subjects, their actions, the background scenes.", # prompt
             ]
             
             print(f"🔄 Running inference...")
@@ -355,7 +356,7 @@ def batch_inference_videos(enhanced_merged_by_name, video_base_path, model_path,
             result = subprocess.run(cmd, 
                                   capture_output=True, 
                                   text=True, 
-                                  cwd="/home/paperspace/LLaVA-NeXT",
+                                  cwd="/home/paperspace/ReposPublic/25-07-14-LLaVA-NeXT",
                                   timeout=300)  # 5 minute timeout
             
             end_time = __import__('time').time()
@@ -632,10 +633,10 @@ def run_complete_pipeline(local_path, video_base_path, model_path, output_base_d
 # Main execution
 if __name__ == "__main__":
     # Configuration
-    LOCAL_CSV_PATH = "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100"
-    VIDEO_BASE_PATH = "/home/paperspace/HFDatasetLoadPlayground/affectgpt-dataset-mini100/video"
+    LOCAL_CSV_PATH = "/home/paperspace/Downloads/affectgpt-dataset-mini100"
+    VIDEO_BASE_PATH = "/home/paperspace/Downloads/affectgpt-dataset-mini100/video"
     MODEL_PATH = "lmms-lab/LLaVA-NeXT-Video-7B-DPO"
-    OUTPUT_BASE_DIR = "/home/paperspace/LLaVA-NeXT/work_dirs/batch_inference_results"
+    OUTPUT_BASE_DIR = "./.work_dirs/batch_inference_results"
     
     # Run complete pipeline for all samples
     print("🚀 Running complete inference pipeline...")

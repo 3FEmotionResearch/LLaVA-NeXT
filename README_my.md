@@ -44,5 +44,5 @@ python affectgptdata.py
 ```bash
 git clone https://github.com/facebookresearch/ImageBind.git
 cd ImageBind
-pip install -e .
+pip install .
 ```

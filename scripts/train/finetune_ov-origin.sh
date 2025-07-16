@@ -47,34 +47,29 @@ ACCELERATE_CPU_AFFINITY=1 torchrun --nproc_per_node="${NUM_GPUS}" --nnodes="${NN
     --bf16 True \
     --run_name $RUN_NAME \
     --output_dir /mnt/bn/vl-research/checkpoints/onevision/$RUN_NAME \
-    --num_train_epochs 2 \
+    --num_train_epochs 1 \
     --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 2 \
-    --gradient_accumulation_steps 1 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 2 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
-    --save_steps 50 \
-    --save_total_limit 2 \
-    --learning_rate 2e-5 \
+    --save_steps 1000 \
+    --save_total_limit 1 \
+    --learning_rate 1e-5 \
     --weight_decay 0. \
-    --warmup_ratio 0.1 \
+    --warmup_ratio 0.03 \
     --lr_scheduler_type "cosine" \
     --logging_steps 1 \
     --tf32 True \
-    --model_max_length 4096 \
+    --model_max_length 32768 \
     --gradient_checkpointing True \
-    --dataloader_num_workers 2 \
+    --dataloader_num_workers 4 \
     --lazy_preprocess True \
     --report_to wandb \
-    --torch_compile False \
+    --torch_compile True \
     --torch_compile_backend "inductor" \
     --dataloader_drop_last True \
-    --frames_upbound 8 \
-    2>&1 | tee logs/training_log_$(date +%Y%m%d_%H%M%S).log
-
-# Command to monitor loss in real-time (run in another terminal):
-# tail -f training_log_*.log | grep -E "(loss|epoch|step)"
-
+    --frames_upbound 32
 exit 0;
 
 # You can delete the sdpa attn_implementation if you want to use flash attn

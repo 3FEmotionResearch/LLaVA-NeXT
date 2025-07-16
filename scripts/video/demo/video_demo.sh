@@ -19,6 +19,7 @@ POOL_MODE=$5
 NEWLINE_POSITION=$6
 OVERWRITE=$7
 VIDEO_PATH=$8
+PROMPT=$9
 
 
 if [ "$OVERWRITE" = False ]; then
@@ -30,14 +31,13 @@ fi
     
 python3 playground/demo/video_demo.py \
     --model-path $CKPT \
-    --video_path ${VIDEO_PATH} \
+    --video_path "${VIDEO_PATH}" \
     --output_dir ./work_dirs/video_demo/$SAVE_DIR \
     --output_name pred \
-    --chunk-idx $(($IDX - 1)) \
     --overwrite ${OVERWRITE} \
     --mm_spatial_pool_stride ${POOL_STRIDE:-4} \
     --for_get_frames_num $FRAMES \
     --conv-mode $CONV_MODE \
     --mm_spatial_pool_mode ${POOL_MODE:-average} \
     --mm_newline_position ${NEWLINE_POSITION:-grid} \
-    --prompt "Please provide a detailed description of the video, focusing on the main subjects, their actions, the background scenes."
+    --prompt "$PROMPT"

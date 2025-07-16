@@ -17,6 +17,9 @@ dist
 *.swp
 .vscode
 
+# Model Weights
+*.pth
+
 # Other
 .DS_Store
 wandb

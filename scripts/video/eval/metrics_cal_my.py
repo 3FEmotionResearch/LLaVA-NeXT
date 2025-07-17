@@ -1,12 +1,15 @@
 # Source from https://github.com/zeroQiaoba/AffectGPT/blob/bf68d98fc4b6709ba46b29cf27c2dce6fd25e888/AffectGPT/my_affectgpt/evaluation/wheel.py#L1 .
 import os
+import sys
 import pandas as pd
 import numpy as np
 import re
 import glob
+import json
 from pathlib import Path
 
-# S: Constants.
+
+# Add project root to Python path for imports
 def get_project_root():
     """Find the project root by looking for .git directory"""
     current_file = Path(__file__).resolve()
@@ -15,7 +18,17 @@ def get_project_root():
             return parent
     raise FileNotFoundError("Project root (with .git directory) not found. Make sure you're running this from within a git repository.")
 
-PROJECT_ROOT = get_project_root()
+
+# Add project root to sys.path so imports work when running script directly
+project_root = get_project_root()
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Import shared data loader
+from scripts.video.data_loader import create_enhanced_merged_dataset
+
+# S: Constants.
+PROJECT_ROOT = project_root
 EMOTION_WHEEL_ROOT = str(PROJECT_ROOT / "scripts" / "video" / "eval" / "emotion_wheel")
 # E: Constants.
 
@@ -54,8 +67,13 @@ def func_read_key_from_csv(csv_path, key):
             values.append("")
         else:
             value = row[key]
-            if pd.isna(value):
-                value = ""
+            try:
+                if pd.isna(value):
+                    value = ""
+            except (TypeError, ValueError):
+                # Handle cases where pd.isna returns array-like objects
+                if hasattr(value, "__iter__") and not isinstance(value, str):
+                    value = ""
             values.append(value)
     return values
 
@@ -79,7 +97,7 @@ def read_format2raws():
         if raw not in format2raws:
             format2raws[raw] = []
         format2raws[raw].append(raw)
-    print(len(format2raws))
+    print(f"format2raws: {len(format2raws)}")
     return format2raws
 
 
@@ -121,9 +139,7 @@ def read_wheel_to_map(xlsx_path):
 def convert_all_wheels_to_candidate_labels():
     candidate_labels = []
     for xlsx_path in glob.glob(EMOTION_WHEEL_ROOT + "/wheel*.xlsx"):
-        # print (xlsx_path)
         store_map = read_wheel_to_map(xlsx_path)
-        # print (store_map)
         for level1 in store_map:
             for level2 in store_map[level1]:
                 level3 = store_map[level1][level2]
@@ -220,10 +236,8 @@ def func_get_name2reason(reason_root):
 
 
 def func_get_wheel_cluster(wheel="wheel1", level="level1"):
-    # print (f'process on wheel: {wheel} level: {level}')
     xlsx_path = os.path.join(EMOTION_WHEEL_ROOT, f"{wheel}.xlsx")
     emotion_wheel = read_wheel_to_map(xlsx_path)
-    # print (emotion_wheel.keys())
     wheel_map = {}
 
     # 1. 所有聚类到level1
@@ -398,24 +412,32 @@ def wheel_metric_calculation(name2gt=None, name2pred=None, process_names=None, i
 # E: Main funcs.
 
 if __name__ == "__main__":
-    name2gt = {
-        'sample_001': 'happy, joyful, content',
-        'sample_002': 'sad, grief',
-        'sample_003': 'angry, irritated',
-        'sample_004': 'surprised'
-    }
 
-    name2pred = {
-        'sample_001': 'glad, cheerful',        # Synonyms of 'happy'
-        'sample_002': 'sadness, depressed',     # Synonyms/related terms for 'sad'
-        'sample_003': 'annoyed, angry',       # Overlapping and related terms
-        'sample_004': 'shocked, happy'       # 'shocked' is related to 'surprised', 'happy' is not
-    }
-    avg_scores_level1 = wheel_metric_calculation(
-        name2gt=name2gt,
-        name2pred=name2pred,
-        level='level1'
-    )
+    enhanced_merged_by_name = create_enhanced_merged_dataset("/home/paperspace/Downloads/affectgpt-dataset-mini100")
+    #   name: str -> 'samplenew3_00000891'
+    #   openset: str -> '[optimistic, hopeful, encouraged]'
+    #   reason: str -> 'In the text, ...'
+    #   chinese_subtitle: str -> '花有重开日'
+    #   english_subtitle: str -> 'Flowers have a day to bloom again.'
+
+    # Convert enhanced_merged_by_name to name2gt format
+    name2gt = {}
+    for key, val in enhanced_merged_by_name.items():
+        name = key
+        openset = val["openset"]
+        name2gt[name] = openset
+
+    # Load predictions.json and convert to name2pred format
+    predictions_path = PROJECT_ROOT / "scripts" / "video" / "batch_inference_results" / "inference_results" / "predictions.json"
+    with open(predictions_path, "r") as f:
+        predictions_data = json.load(f)
+
+    name2pred = {}
+    for key, val in predictions_data.items():
+        name = key
+        cleaned_emotion = val["cleaned_emotion"]
+        name2pred[name] = cleaned_emotion
+    avg_scores_level1 = wheel_metric_calculation(name2gt=name2gt, name2pred=name2pred, level="level1")
 
     print(f"\\nFinal Average Scores (Level 1):")
     print(f"  F1-Score: {avg_scores_level1[0]:.4f}")

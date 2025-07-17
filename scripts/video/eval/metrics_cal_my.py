@@ -1,6 +1,11 @@
 # Source from https://github.com/zeroQiaoba/AffectGPT/blob/bf68d98fc4b6709ba46b29cf27c2dce6fd25e888/AffectGPT/my_affectgpt/evaluation/wheel.py#L1 .
+'''
+# How to run scripts
+cd $REPO_ROOT
+python -m scripts.video.eval.metrics_cal_my
+'''
+
 import os
-import sys
 import pandas as pd
 import numpy as np
 import re
@@ -8,8 +13,10 @@ import glob
 import json
 from pathlib import Path
 
+# Import shared data loader
+from scripts.video.data_loader import create_enhanced_merged_dataset
 
-# Add project root to Python path for imports
+# S: Constants.
 def get_project_root():
     """Find the project root by looking for .git directory"""
     current_file = Path(__file__).resolve()
@@ -18,18 +25,9 @@ def get_project_root():
             return parent
     raise FileNotFoundError("Project root (with .git directory) not found. Make sure you're running this from within a git repository.")
 
-
-# Add project root to sys.path so imports work when running script directly
-project_root = get_project_root()
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
-
-# Import shared data loader
-from scripts.video.data_loader import create_enhanced_merged_dataset
-
-# S: Constants.
-PROJECT_ROOT = project_root
+PROJECT_ROOT = get_project_root()
 EMOTION_WHEEL_ROOT = str(PROJECT_ROOT / "scripts" / "video" / "eval" / "emotion_wheel")
+PREDICTIONS_PATH = PROJECT_ROOT / "scripts" / "video" / "batch_inference_results" / "inference_results" / "predictions.json"
 # E: Constants.
 
 
@@ -428,8 +426,7 @@ if __name__ == "__main__":
         name2gt[name] = openset
 
     # Load predictions.json and convert to name2pred format
-    predictions_path = PROJECT_ROOT / "scripts" / "video" / "batch_inference_results" / "inference_results" / "predictions.json"
-    with open(predictions_path, "r") as f:
+    with open(PREDICTIONS_PATH, "r") as f:
         predictions_data = json.load(f)
 
     name2pred = {}

@@ -1,9 +1,9 @@
 # Source from https://github.com/zeroQiaoba/AffectGPT/blob/bf68d98fc4b6709ba46b29cf27c2dce6fd25e888/AffectGPT/my_affectgpt/evaluation/wheel.py#L1 .
-'''
+"""
 # How to run scripts
 cd $REPO_ROOT
 python -m scripts.video.eval.metrics_cal_my
-'''
+"""
 
 import os
 import pandas as pd
@@ -16,6 +16,7 @@ from pathlib import Path
 # Import shared data loader
 from scripts.video.data_loader import create_enhanced_merged_dataset
 
+
 # S: Constants.
 def get_project_root():
     """Find the project root by looking for .git directory"""
@@ -24,6 +25,7 @@ def get_project_root():
         if (parent / ".git").exists():
             return parent
     raise FileNotFoundError("Project root (with .git directory) not found. Make sure you're running this from within a git repository.")
+
 
 PROJECT_ROOT = get_project_root()
 EMOTION_WHEEL_ROOT = str(PROJECT_ROOT / "scripts" / "video" / "eval" / "emotion_wheel")

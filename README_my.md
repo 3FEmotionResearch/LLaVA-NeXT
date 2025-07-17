@@ -11,35 +11,25 @@ pip install flash-attn==2.5.7
 pip install -r requirements_my.txt
 ```
 * Follow "#### 2. **Install the inference package:**" to install currnet repo as a pkg.
-* Run the demo
+* Test the demo
 ```bash
 bash scripts/video/demo/video_demo.sh lmms-lab/LLaVA-NeXT-Video-7B-DPO vicuna_v1 32 2 average grid True /home/paperspace/Downloads/25-07-11-affectgpt-dataset-mini100/video/sample_00000007.mp4
 ```
 
-# Batch Inference on AffectGPT Dataset
-* Put the affectgpt dataset in the path:
-```bash
-/home/paperspace/LLaVA-NeXT/scripts/video/affectgpt-dataset-mini100
+# Our scripts
+## Run emotion detection inference by using mercaptionplus dataset's video and Chinese, English subtitles. (Audio modality is TBD)
+At this repo's root path. Extract mercaptionplus dataset to some path. The cmd below will generate predictions.json at `./work_dirs`.
 ```
-* The dataset should contain the following files:
-  - CSV files: `subtitle_chieng.csv`, `track2_train_mercaptionplus.csv`, `track2_train_ovmerd.csv`, `track3_train_mercaptionplus.csv`, `track3_train_ovmerd.csv`
-  - Video files in: `video/` folder with `.mp4` files
-
-* Run batch inference on all 50 samples:
-```bash
-cd /home/paperspace/LLaVA-NeXT/scripts/video
-python affectgptdata.py
+python -m playground.demo.emotion_detect_infer_my --dataset_path_mercaptionplus=/home/paperspace/Downloads/affectgpt-dataset-mini100
+```
+We can run evaluation metrics based on AffectGPT emotion wheel:
+```
+python -m scripts.video.eval.mercaptionplus_metrics_cal_my \
+  --dataset_path /home/paperspace/Downloads/affectgpt-dataset-mini100 \
+  --predictions_path /home/paperspace/ReposPublic/25-07-14-LLaVA-NeXT/work_dirs/emotion_detect_infer_outputs/LLaVA-NeXT-Video-7B-DPO_vicuna_v1_frames_8_stride_2/predictions.json
 ```
 
-* This will:
-  - Load and merge all CSV data files
-  - Save ground truth labels to: `work_dirs/batch_inference_results/ground_truth_labels.json`
-  - Run inference on all available video samples using the same method as `video_demo.sh`
-  - Save predictions to: `work_dirs/batch_inference_results/inference_results/predictions.json`
-  - Save raw outputs to: `work_dirs/batch_inference_results/inference_results/raw_outputs.json`
-  - Save failed samples (if any) to: `work_dirs/batch_inference_results/inference_results/failed_samples.json`
-
-# Multimodal Demo
+# Multimodal Setup TBD
 * Install imagebind
 ```bash
 git clone https://github.com/facebookresearch/ImageBind.git

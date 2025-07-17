@@ -16,9 +16,6 @@ def create_enhanced_merged_dataset(local_path=None):
     Returns:
         dict: Dictionary containing:
             - enhanced_merged_by_name: Complete dataset with all merged data
-            - merged_by_name: Basic merged dataset (track2 + track3)
-            - subtitle_by_name: Subtitle data indexed by name
-            - datasets: All loaded individual datasets
     """
 
     # Required CSV files
@@ -179,4 +176,5 @@ def create_enhanced_merged_dataset(local_path=None):
             enhanced_merged_by_name = merged_by_name.copy()
 
     # Return all the created data structures
+    print(f"Number of samples in enhanced_merged_by_name: {len(enhanced_merged_by_name)}")
     return enhanced_merged_by_name

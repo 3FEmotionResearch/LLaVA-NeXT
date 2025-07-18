@@ -6,6 +6,7 @@ dependencies:
   - _openmp_mutex=5.1=1_gnu
   - bzip2=1.0.8=h5eee18b_6
   - ca-certificates=2025.2.25=h06a4308_0
+  - et_xmlfile=1.1.0=py310h06a4308_0
   - expat=2.7.1=h6a678d5_0
   - ld_impl_linux-64=2.40=h12ee557_0
   - libffi=3.4.4=h6a678d5_1
@@ -15,6 +16,7 @@ dependencies:
   - libuuid=1.41.5=h5eee18b_0
   - libxcb=1.17.0=h9b100fa_0
   - ncurses=6.4=h6a678d5_0
+  - openpyxl=3.1.5=py310h5eee18b_1
   - openssl=3.0.16=h5eee18b_0
   - pthread-stubs=0.3=h0ce48e5_1
   - python=3.10.18=h1a3bd86_0

@@ -1,10 +1,14 @@
 # Source from https://github.com/zeroQiaoba/AffectGPT/blob/bf68d98fc4b6709ba46b29cf27c2dce6fd25e888/AffectGPT/my_affectgpt/evaluation/wheel.py#L1 .
 """
-# How to run scripts
+# How to run
 cd $REPO_ROOT
-python -m scripts.video.eval.metrics_cal_my
+
+python -m scripts.video.eval.mercaptionplus_metrics_cal_my \
+  --dataset_path /home/paperspace/Downloads/affectgpt-dataset-mini100 \
+  --predictions_path /home/paperspace/ReposPublic/25-07-14-LLaVA-NeXT/work_dirs/emotion_detect_infer_outputs/LLaVA-NeXT-Video-7B-DPO_vicuna_v1_frames_8_stride_2/predictions.json
 """
 
+import argparse
 import os
 import pandas as pd
 import numpy as np
@@ -29,8 +33,43 @@ def get_project_root():
 
 PROJECT_ROOT = get_project_root()
 EMOTION_WHEEL_ROOT = str(PROJECT_ROOT / "scripts" / "video" / "eval" / "emotion_wheel")
-PREDICTIONS_PATH = PROJECT_ROOT / "scripts" / "video" / "batch_inference_results" / "inference_results" / "predictions.json"
 # E: Constants.
+
+
+def parse_args():
+    """Parse command-line arguments."""
+    parser = argparse.ArgumentParser(description="Calculate emotion detection metrics using emotion wheel")
+    
+    parser.add_argument(
+        "--dataset_path",
+        type=str,
+        required=True,
+        help="Path to the MERCaptionPlus dataset folder"
+    )
+    
+    parser.add_argument(
+        "--predictions_path",
+        type=str,
+        required=True,
+        help="Path to the predictions JSON file"
+    )
+    
+    parser.add_argument(
+        "--emotion_label_field",
+        type=str,
+        default="emotion_labels",
+        help="Field name in predictions JSON that contains emotion labels"
+    )
+    
+    parser.add_argument(
+        "--level",
+        type=str,
+        default="level1",
+        choices=["level1", "level2"],
+        help="Emotion wheel level for evaluation"
+    )
+    
+    return parser.parse_args()
 
 
 # S: Helpers.
@@ -412,8 +451,16 @@ def wheel_metric_calculation(name2gt=None, name2pred=None, process_names=None, i
 # E: Main funcs.
 
 if __name__ == "__main__":
+    # Parse command-line arguments
+    args = parse_args()
+    
+    print(f"Using dataset path: {args.dataset_path}")
+    print(f"Using predictions path: {args.predictions_path}")
+    print(f"Using emotion label field: {args.emotion_label_field}")
+    print(f"Using evaluation level: {args.level}")
 
-    enhanced_merged_by_name = create_enhanced_merged_dataset("/home/paperspace/Downloads/affectgpt-dataset-mini100")
+    # Load dataset
+    enhanced_merged_by_name = create_enhanced_merged_dataset(args.dataset_path)
     #   name: str -> 'samplenew3_00000891'
     #   openset: str -> '[optimistic, hopeful, encouraged]'
     #   reason: str -> 'In the text, ...'
@@ -428,17 +475,19 @@ if __name__ == "__main__":
         name2gt[name] = openset
 
     # Load predictions.json and convert to name2pred format
-    with open(PREDICTIONS_PATH, "r") as f:
+    with open(args.predictions_path, "r") as f:
         predictions_data = json.load(f)
 
     name2pred = {}
     for key, val in predictions_data.items():
         name = key
-        cleaned_emotion = val["cleaned_emotion"]
-        name2pred[name] = cleaned_emotion
-    avg_scores_level1 = wheel_metric_calculation(name2gt=name2gt, name2pred=name2pred, level="level1")
+        emotion_labels_str = val[args.emotion_label_field]
+        name2pred[name] = emotion_labels_str
+    
+    # Calculate metrics
+    avg_scores = wheel_metric_calculation(name2gt=name2gt, name2pred=name2pred, level=args.level, inter_print=False)
 
-    print(f"\\nFinal Average Scores (Level 1):")
-    print(f"  F1-Score: {avg_scores_level1[0]:.4f}")
-    print(f"  Precision: {avg_scores_level1[1]:.4f}")
-    print(f"  Recall: {avg_scores_level1[2]:.4f}")
+    print(f"  Final Average Scores ({args.level.upper()}):")
+    print(f"  F1-Score: {avg_scores[0]:.4f}")
+    print(f"  Precision: {avg_scores[1]:.4f}")
+    print(f"  Recall: {avg_scores[2]:.4f}")
